@@ -30,5 +30,4 @@ namespace iNeural
         void fillCompressionMatrix(Eigen::MatrixXd &cm);
     };
 } // namespace
-
 #endif

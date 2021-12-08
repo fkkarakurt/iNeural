@@ -24,7 +24,7 @@ _A neural network is a massively parallel distributed processor made up of simpl
 
 The procedure used to perform the learning process is called a learning algorithm, the function of which is to modify the synaptic weights of the network in an orderly fashion to attain a desired design objective.
 
-The modification of synaptic weights provides the traditional method for the design of neural networks. Such an approach is the closest to linear adaptive filter theory, which is already well established and successfully applied in many diverse fields. However, it is also possible for a neural network to modify its own topology, which is motivated by the fact that neurons in the human brain can die and new synaptic connections can grow
+The modification of synaptic weights provides the traditional method for the design of neural networks. Such an approach is the closest to linear adaptive filter theory, which is already well established and successfully applied in many diverse fields. However, it is also possible for a neural network to modify its own topology, which is motivated by the fact that neurons in the human brain can die and new synaptic connections can grow
 
 <p  align="right"><em>Neural Networks and Learning Machines, 3rd Edition</em></p>
 <p align="right"><b>Simon Haykin</b></p>
@@ -88,9 +88,10 @@ _I am preparing a very detailed documentation describing what the project really
 - [THE POLE BALANCING PROBLEM](<https://researchbank.swinburne.edu.au/file/62a8df69-4a2c-407f-8040-5ac533fc2787/1/PDF%20(12%20pages).pdf>)
 - [SARCOS](http://www.gaussianprocess.org/gpml/data/)
 
-### Social
+---
 
-<a href="https://linkedin.com/in/fkkarakurt" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></img></a><a href="https://instagram.com/fkkarakurt" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></img></a><a href="https://twitter.com/fkkarakurt" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></img></a><a href="https://github.com/fkkarakurt" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></img></a><a href="https://www.hackerrank.com/fatihkkarakurt11" target="_blank"><img src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white"></img></a><br/>
+<p align="center">
+<a href="https://linkedin.com/in/fkkarakurt" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></img></a><a href="https://instagram.com/fkkarakurt" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></img></a><a href="https://twitter.com/fkkarakurt" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></img></a><a href="https://github.com/fkkarakurt" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></img></a><a href="https://www.hackerrank.com/fatihkkarakurt11" target="_blank"><img src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white"></img></a></p><br/>
 
 ---
 

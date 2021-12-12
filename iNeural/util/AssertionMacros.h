@@ -1,5 +1,5 @@
-#ifndef INUERAL_UTIL_ASSERTION_MACROS_H_
-#define INUERAL_UTIL_ASSERTION_MACROS_H_
+#ifndef INEURAL_UTIL_ASSERTION_MACROS_H_
+#define INEURAL_UTIL_ASSERTION_MACROS_H_
 
 #ifndef NDEBUG
 
@@ -29,55 +29,55 @@ namespace iNeural
     }
 } // namespace
 
-#define OPENANN_CHECK(x) assert(x)
+#define INEURAL_CHECK(x) assert(x)
 
-#define OPENANN_CHECK_EQUALS(x, y) \
+#define INEURAL_CHECK_EQUALS(x, y) \
     {                              \
         if (!((x) == (y)))         \
         {                          \
-            OPENANN_TRACE((x));    \
-            OPENANN_TRACE("!=");   \
-            OPENANN_TRACE((y));    \
+            INEURAL_TRACE((x));    \
+            INEURAL_TRACE("!=");   \
+            INEURAL_TRACE((y));    \
         }                          \
         assert((x) == (y));        \
     }
 
-#define OPENANN_CHECK_NOT_EQUALS(x, y) \
+#define INEURAL_CHECK_NOT_EQUALS(x, y) \
     assert((x) != (y))
 
-#define OPENANN_CHECK_EQUALS_DELTA(x, y, delta) \
-    assert(OpenANN::equals((x), (y), (delta)))
+#define INEURAL_CHECK_EQUALS_DELTA(x, y, delta) \
+    assert(iNeural::equals((x), (y), (delta)))
 
-#define OPENANN_CHECK_WITHIN(x, min, max) \
+#define INEURAL_CHECK_WITHIN(x, min, max) \
     assert(((min) <= (x)) && ((x) <= (max)));
 
-#define OPENANN_CHECK_NAN(value)               \
-    if (OpenANN::isNaN(value))                 \
+#define INEURAL_CHECK_NAN(value)               \
+    if (iNeural::isNaN(value))                 \
     {                                          \
-        OPENANN_TRACE("nan");                  \
-        OPENANN_CHECK(!OpenANN::isNaN(value)); \
+        INEURAL_TRACE("nan");                  \
+        INEURAL_CHECK(!iNeural::isNaN(value)); \
     }
 
-#define OPENANN_CHECK_INF(value)               \
-    if (OpenANN::isInf(value))                 \
+#define INEURAL_CHECK_INF(value)               \
+    if (iNeural::isInf(value))                 \
     {                                          \
-        OPENANN_TRACE("inf");                  \
-        OPENANN_CHECK(!OpenANN::isInf(value)); \
+        INEURAL_TRACE("inf");                  \
+        INEURAL_CHECK(!iNeural::isInf(value)); \
     }
 
-#define OPENANN_CHECK_INF_AND_NAN(value) \
-    OPENANN_CHECK_INF(value);            \
-    OPENANN_CHECK_NAN(value);
+#define INEURAL_CHECK_INF_AND_NAN(value) \
+    INEURAL_CHECK_INF(value);            \
+    INEURAL_CHECK_NAN(value);
 
 #else // NDEBUG
-#define OPENANN_CHECK(x)
-#define OPENANN_CHECK_EQUALS(x, y)
-#define OPENANN_CHECK_NOT_EQUALS(x, y)
-#define OPENANN_CHECK_EQUALS_DELTA(x, y, delta)
-#define OPENANN_CHECK_WITHIN(x, min, max)
-#define OPENANN_CHECK_NAN(value)
-#define OPENANN_CHECK_INF(value)
-#define OPENANN_CHECK_INF_AND_NAN(value)
+#define INEURAL_CHECK(x)
+#define INEURAL_CHECK_EQUALS(x, y)
+#define INEURAL_CHECK_NOT_EQUALS(x, y)
+#define INEURAL_CHECK_EQUALS_DELTA(x, y, delta)
+#define INEURAL_CHECK_WITHIN(x, min, max)
+#define INEURAL_CHECK_NAN(value)
+#define INEURAL_CHECK_INF(value)
+#define INEURAL_CHECK_INF_AND_NAN(value)
 #endif // NDEBUG
 
 #endif

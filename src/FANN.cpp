@@ -43,7 +43,7 @@ namespace iNeural
 
         void save(const Eigen::MatrixXd &in, const Eigen::MatrixXd &out, std::ostream &stream)
         {
-            OPENANN_CHECK_EQUALS(in.rows(), out.rows());
+            INEURAL_CHECK_EQUALS(in.rows(), out.rows());
 
             int N = in.rows();
             int D = in.cols();

@@ -1,5 +1,5 @@
-#ifndef INEURAL_IO_DATA_SET_VIEW_H_
-#define INEURAL_IO_DATA_SET_VIEW_H_
+#ifndef INEURAL_INPUT_OUTPUT_DATA_SET_VIEW_H_
+#define INEURAL_INPUT_OUTPUT_DATA_SET_VIEW_H_
 
 #include <Eigen/Core>
 #include <vector>

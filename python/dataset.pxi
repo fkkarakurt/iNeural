@@ -1,5 +1,4 @@
 cdef class DataSet:
-    """Contains instances and targets."""
     cdef cbindings.MatrixXd* input
     cdef cbindings.MatrixXd* output
     cdef cbindings.DataSet* storage
@@ -57,7 +56,6 @@ cdef class DataSet:
             return 0
 
 def load_from_libsvm(filename):
-  """Load dataset from libsvm file."""
   cdef cbindings.MatrixXd* input = new cbindings.MatrixXd()
   cdef cbindings.MatrixXd* output = new cbindings.MatrixXd()
   ds = DataSet()
@@ -68,7 +66,6 @@ def load_from_libsvm(filename):
   return ds 
 
 cdef class DataStream:
-  """Streams training data for online training."""
   cdef cbindings.DataStream* thisptr
 
   def __cinit__(self, cache_size):

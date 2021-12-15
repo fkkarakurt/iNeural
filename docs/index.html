@@ -1,6 +1,182 @@
-<h2>DOCS API for iNeural</h2>
+<div class="container">
+  <h1 class="heading" data-target-resolver></h1>
+</div>
 
-iNeural API Documentation is being prepared. You will find it here as soon as
-possible.
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-<a href="https://github.com/fkkarakurt" target="_blank">Fatih Kucukkarakurt</a>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: "Unica One", sans-serif;
+    background: #111;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 5rem;
+  }
+
+  .heading {
+    color: #eee;
+    font-size: 5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+</style>
+
+<script>
+  const resolver = {
+    resolve: function resolve(options, callback) {
+      const resolveString =
+        options.resolveString ||
+        options.element.getAttribute("data-target-resolver");
+      const combinedOptions = Object.assign({}, options, {
+        resolveString: resolveString,
+      });
+
+      function getRandomInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function randomCharacter(characters) {
+        return characters[getRandomInteger(0, characters.length - 1)];
+      }
+
+      function doRandomiserEffect(options, callback) {
+        const characters = options.characters;
+        const timeout = options.timeout;
+        const element = options.element;
+        const partialString = options.partialString;
+
+        let iterations = options.iterations;
+
+        setTimeout(() => {
+          if (iterations >= 0) {
+            const nextOptions = Object.assign({}, options, {
+              iterations: iterations - 1,
+            });
+
+            if (iterations === 0) {
+              element.textContent = partialString;
+            } else {
+              element.textContent =
+                partialString.substring(0, partialString.length - 1) +
+                randomCharacter(characters);
+            }
+
+            doRandomiserEffect(nextOptions, callback);
+          } else if (typeof callback === "function") {
+            callback();
+          }
+        }, options.timeout);
+      }
+
+      function doResolverEffect(options, callback) {
+        const resolveString = options.resolveString;
+        const characters = options.characters;
+        const offset = options.offset;
+        const partialString = resolveString.substring(0, offset);
+        const combinedOptions = Object.assign({}, options, {
+          partialString: partialString,
+        });
+
+        doRandomiserEffect(combinedOptions, () => {
+          const nextOptions = Object.assign({}, options, {
+            offset: offset + 1,
+          });
+
+          if (offset <= resolveString.length) {
+            doResolverEffect(nextOptions, callback);
+          } else if (typeof callback === "function") {
+            callback();
+          }
+        });
+      }
+
+      doResolverEffect(combinedOptions, callback);
+    },
+  };
+
+  const strings = [
+    "iNeural",
+    "C++ Neural Network Library.",
+    "Still Some Improvements Being Made.",
+    "Coming Soon You Will Find All API Documentation Here.",
+    "A library for creating Artificial Neural Networks, for use in Machine Learning and Deep Learning algorithms.",
+    "For those who want to use open source neural network in problem solving",
+    "For those who want to integrate new technologies into their projects",
+    "For students who want to understand the tricks needed for neural networks",
+    "For Researchers, Machine Learning and Deep Learning Enthusiasts",
+  ];
+
+  let counter = 0;
+
+  const options = {
+    offset: 0,
+    timeout: 5,
+    iterations: 10,
+    characters: [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "o",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "u",
+      "v",
+      "x",
+      "y",
+      "x",
+      "#",
+      "%",
+      "&",
+      "-",
+      "+",
+      "_",
+      "?",
+      "/",
+      "\\",
+      "=",
+    ],
+    resolveString: strings[counter],
+    element: document.querySelector("[data-target-resolver]"),
+  };
+
+  function callback() {
+    setTimeout(() => {
+      counter++;
+
+      if (counter >= strings.length) {
+        counter = 0;
+      }
+
+      let nextOptions = Object.assign({}, options, {
+        resolveString: strings[counter],
+      });
+      resolver.resolve(nextOptions, callback);
+    }, 1000);
+  }
+
+  resolver.resolve(options, callback);
+</script>

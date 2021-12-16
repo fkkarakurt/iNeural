@@ -4,6 +4,7 @@
 #include <iNeural/optimization/Optimizer.h>
 #include <iNeural/optimization/StoppingCriteria.h>
 #include <Eigen/Core>
+#include <optimization.h>
 
 namespace iNeural
 {
@@ -17,11 +18,9 @@ namespace iNeural
         Eigen::VectorXd parameters, gradient;
         double error;
 
-        /* Error Code : 454
         alglib_impl::ae_state envState;
         alglib::mincgstate state;
         alglib::real_1d_array xIn;
-        */
 
     public:
         CG();
@@ -38,8 +37,6 @@ namespace iNeural
         void reset();
     };
 
-} // namespace OpenANN
+} // namespace
 
 #endif
-
-// ERROR CODE : 454 ==> algLib and Optimization libraries will be prepared

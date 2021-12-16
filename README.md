@@ -76,6 +76,7 @@ _I am preparing a very detailed documentation describing what the project really
 - CMake v3.21.0-rc2
 - GNU C++ Compiler (g++)
 - [Eigen 3](https://eigen.tuxfamily.org/)
+- [ALGLIB](https://www.alglib.net/)
 - Python 3
 - C++
 

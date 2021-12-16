@@ -22,8 +22,7 @@ namespace iNeural
         int paramDim;
 
         CompressionMatrixFactory();
-        CompressionMatrixFactory(int inputDim, int paramDim,
-                                 Transformation transformation = DCT);
+        CompressionMatrixFactory(int inputDim, int paramDim, Transformation transformation = DCT);
         void createCompressionMatrix(Eigen::MatrixXd &cm);
 
     private:

@@ -16,6 +16,6 @@ namespace iNeural
     {
         return YmT.array().square().sum() / (2.0 * (double)YmT.rows());
     }
-} // namespace
+}
 
 #endif

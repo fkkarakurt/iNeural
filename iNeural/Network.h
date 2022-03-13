@@ -91,6 +91,6 @@ namespace iNeural
         void forwardPropagate(double *error);
         void backpropagate();
     };
-} // namespace
+}
 
 #endif

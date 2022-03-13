@@ -1,0 +1,29 @@
+#ifndef INEURAL_INCLUDED
+#define INEURAL_INCLUDED
+
+#ifdef PARALLEL_CORES
+#include <omp.h>
+#endif
+
+namespace iNeural
+{
+    class iNeuralLibraryInfo
+    {
+    public:
+        static const char *VERSION;
+        static const char *URL;
+        static const char *DESCRIPTION;
+        static const char *COMPILATION_TIME;
+        static const char *COMPILER_FLAGS;
+        static void print();
+    };
+
+    void useAllCores();
+
+}
+
+#include <iNeural/Network.h>
+#include <iNeural/Convenience.h>
+#include <iNeural/optimization/StoppingCriteria.h>
+
+#endif

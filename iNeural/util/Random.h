@@ -62,6 +62,6 @@ namespace iNeural
                 *p = sampleNormalDistribution<double>() * stdDev;
         }
     };
-} // namespace
+}
 
 #endif

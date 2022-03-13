@@ -12,6 +12,6 @@ namespace iNeural
         iNeuralException(const std::string &msg);
     };
 
-} // namespace
+}
 
 #endif

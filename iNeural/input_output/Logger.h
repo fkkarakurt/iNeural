@@ -10,18 +10,18 @@
 #define INEURAL_OUTPUT(msg) std::cout << __FILE__ << "(" << __LINE__ << "): " << msg << std::endl;
 #define INEURAL_TRACE(msg) std::cerr << __FILE__ << "(" << __LINE__ << "): " << msg << std::endl;
 
-#else // NDEBUG
+#else
 #define INEURAL_OUTPUT(msg) std::cout << msg << std::endl;
 #define INEURAL_TRACE(msg)
-#endif // NDEBUG
+#endif
 
 #ifndef INEURAL_LOG_NAMESPACE
 #define INEURAL_LOG_NAMESPACE NULL
-#endif // INEURAL_LOG_NAMESPACE
+#endif
 
 #ifndef INEURAL_LOGLEVEL
 #define INEURAL_LOGLEVEL iNeural::Log::DEBUG
-#endif // INEURAL_LOGLEVEL
+#endif
 
 #define INEURAL_LOG(level)                     \
     if (level > INEURAL_LOGLEVEL)              \
@@ -34,8 +34,6 @@
 #define INEURAL_DEBUG INEURAL_LOG(iNeural::Log::DEBUG)
 #define INEURAL_INFO INEURAL_LOG(iNeural::Log::INFO)
 #define INEURAL_ERROR INEURAL_LOG(iNeural::Log::ERROR)
-
-// ============================================= //
 
 namespace iNeural
 {
@@ -118,6 +116,6 @@ namespace iNeural
         }
         return logger;
     }
-} // namespace
+}
 
 #endif

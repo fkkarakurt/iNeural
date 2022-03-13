@@ -9,7 +9,7 @@
 
 namespace iNeural
 {
-    class Evaluator;
+    class Assessmenter;
 
     class DirectStorageDataSet : public DataSet
     {
@@ -21,10 +21,10 @@ namespace iNeural
         const int F;
         Eigen::VectorXd temporaryInput;
         Eigen::VectorXd temporaryOutput;
-        Evaluator *evaluator; // DON'T DELETE
+        Assessmenter *assessmenter; // DON'T DELETE
 
     public:
-        DirectStorageDataSet(Eigen::MatrixXd *in, Eigen::MatrixXd *out = 0, Evaluator *evaluator = 0);
+        DirectStorageDataSet(Eigen::MatrixXd *in, Eigen::MatrixXd *out = 0, Assessmenter *assessmenter = 0);
         virtual int samples() { return N; }
         virtual int inputs() { return D; }
         virtual int outputs() { return F; }
@@ -32,6 +32,6 @@ namespace iNeural
         virtual Eigen::VectorXd &getTarget(int i);
         virtual void finishIteration(Learner &learner);
     };
-} // namespace
+}
 
 #endif

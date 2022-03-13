@@ -49,6 +49,6 @@ namespace iNeural
     private:
         void initialize();
     };
-} // namespace
+}
 
 #endif

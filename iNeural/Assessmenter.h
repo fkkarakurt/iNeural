@@ -29,6 +29,5 @@ namespace iNeural
         virtual ~MulticlassAssessmenter();
         virtual void assessment(Learner &learner, DataSet &dataSet);
     };
-} // namespace
-
+}
 #endif

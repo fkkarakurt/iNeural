@@ -1,0 +1,2 @@
+version = "${INEURAL_VERSION_NUMBER}"
+libraries = [${PYTHONEX_LINK_LIBRARIES}]
